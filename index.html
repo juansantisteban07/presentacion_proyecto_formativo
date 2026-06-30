@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestion de citas MIRADENT | SENA ADSO</title>
+
+<!-- Tipografías: Poppins (display) + Inter (texto/cuerpo) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="rail" aria-hidden="true">
+  <span class="rail-line"></span>
+</div>
+
+<header class="navbar">
+  <a href="#hero" class="nav-brand">Proyecto<span>•</span>SENA</a>
+  <nav class="nav-links">
+    <a href="#presentacion">Presentación</a>
+    <a href="#problema">Problema</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#arquitectura">Arquitectura</a>
+    <a href="#marca">Marca</a>
+    <a href="#prototipo">Prototipo</a>
+    <a href="#recursos">Recursos</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="hero" class="slide hero">
+    <img src="logo.jpeg" alt="Logo de Gestion de citas MIRADENT" class="hero-logo">
+    <p class="eyebrow">Proyecto formativo &mdash; Tecnólogo ADSO</p>
+    <h1 class="hero-title">Gestion de citas MIRADENT</h1>
+  </section>
+
+  <!-- 1. PRESENTACIÓN -->
+  <section id="presentacion" class="slide">
+    <p class="eyebrow">01</p>
+    <h2 class="section-title">Presentación</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">📁</span>
+        <h3>MIRADENT</h3>
+        <p>Gestion eficiente de citas odontologicas.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🧑‍🤝‍🧑</span>
+        <h3>Integrantes</h3>
+        <p>Juan Sebastian Diaz Santisteban, Kevin Santiago Moquera Perea.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🎓</span>
+        <h3>Programa ADSO</h3>
+        <p>Análisis y Desarrollo de Software.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🗂️</span>
+        <h3>Ficha</h3>
+        <p>3275760.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. INTRODUCCIÓN -->
+  <section id="introduccion" class="slide">
+    <p class="eyebrow">02</p>
+    <h2 class="section-title">Introducción</h2>
+    <div class="intro-block">
+      <p class="hook">Cada minuto que un odontólogo dedica a buscar documentos o reorganizar una agenda es un minuto menos atendiendo pacientes.</p>
+      <p class="intro-text">Por eso desarrollamos una solución que optimiza la gestión de consultorios odontológicos de una forma sencilla, segura y eficiente.</p>
+      <p class="cta-text">Problema: Gestion y organizacion del agendamiento de citas.</p>
+    </div>
+  </section>
+
+  <!-- 3. SITUACIÓN PROBLEMA -->
+  <section id="problema" class="slide">
+    <p class="eyebrow">03</p>
+    <h2 class="section-title">Situación Problema</h2>
+    <div class="split-block">
+      <div class="problem-text">
+        <p>En la actualidad, muchos consultorios odontológicos, especialmente los de pequeño y mediano tamaño, aún gestionan gran parte de sus procesos administrativos y clínicos de forma manual o mediante herramientas poco integradas. Esta situación dificulta el control de las citas, el registro de pacientes, el acceso a las historias clínicas y la organización de la información, lo que puede generar retrasos, pérdida de datos y una atención menos eficiente.</p>
+      </div>
+      <img src="reloj.png" alt="Ilustración de gestión del tiempo" class="problem-img">
+    </div>
+  </section>
+
+  <!-- 4. PREGUNTA PROBLEMA -->
+  <section id="pregunta" class="slide">
+    <p class="eyebrow">04</p>
+    <h2 class="section-title">Pregunta Problema</h2>
+    <div class="card card-feature">
+      <p class="feature-question">¿Cómo mejorar la administración de citas, pacientes e historias clínicas en los consultorios odontológicos mediante una solución tecnológica?</p>
+    </div>
+  </section>
+
+  <!-- 5. OBJETIVO GENERAL -->
+  <section id="objetivo-general" class="slide">
+    <p class="eyebrow">05</p>
+    <h2 class="section-title">Objetivo General</h2>
+    <div class="card card-feature">
+      <p class="feature-text">Desarrollar un sistema web. que permita al cliente reservar sus turnos y citas de manera sencilla y con recordatorio automático, y que proporcione al negocio herramienta de control y estadística para optimizar sus servicios.</p>
+    </div>
+  </section>
+
+  <!-- 6. OBJETIVOS ESPECÍFICOS -->
+  <section id="objetivos" class="slide">
+    <p class="eyebrow">06</p>
+    <h2 class="section-title">Objetivos Específicos</h2>
+    <div class="card-grid">
+      <div class="card"><span class="card-num">01</span><p>Desarrollar un sistema de registro y autenticación para los clientes y administradores.</p></div>
+      <div class="card"><span class="card-num">02</span><p>02.	Implementar un calendario interactivo que muestre la disponibilidad de turnos.</p></div>
+      <div class="card"><span class="card-num">03</span><p>03.	Incorporar notificaciones automáticas, (correo o WhatsApp) para recordar las citas.</p></div>
+      <div class="card"><span class="card-num">04</span><p>04.	Diseñar un panel administrativo con reporte de uso (hora pico, servicios mas solicitados).</p></div>
+    </div>
+  </section>
+
+  <!-- 7. DIAGRAMAS -->
+  <section id="diagramas" class="slide">
+    <p class="eyebrow">07</p>
+    <h2 class="section-title">Diagramas</h2>
+    <div class="diagram-grid">
+      <div class="diagram-item">
+        <div class="img-wrap">
+          <img src="diagrama de clases.png" alt="Diagrama de Clases" class="diagram-img">
+          <button type="button" class="zoom-btn" data-img="diagrama de clases.png" data-alt="Diagrama de Clases">🔍 Ver imagen ampliada</button>
+        </div>
+        <h3>Diagrama de Clases</h3>
+        <p>El diagrama de clases representa la estructura estática del sistema MIRADENT, mostrando las principales clases, sus atributos, métodos y relaciones. Este modelo sirve como base para el desarrollo del software, permitiendo organizar la lógica del negocio y facilitar la implementación del sistema en ASP.NET Core y Angular.</p>
+      </div>
+      <div class="diagram-item">
+        <div class="img-wrap">
+          <img src="diagrama de arquitectura.jpg" alt="Diagrama de Arquitectura" class="diagram-img">
+          <button type="button" class="zoom-btn" data-img="diagrama de arquitectura.jpg" data-alt="Diagrama de Arquitectura">🔍 Ver imagen ampliada</button>
+        </div>
+        <h3>Arquitectura</h3>
+        <p>El diagrama de arquitectura presenta la organización del sistema mediante una arquitectura de tres capas: presentación, lógica de negocio y datos. Esta estructura permite separar responsabilidades, mejorar el mantenimiento del software y garantizar una comunicación eficiente entre el frontend desarrollado en Angular, el backend en ASP.NET Core Web API y la base de datos SQL Server.</p>
+      </div>
+      <div class="diagram-item">
+        <div class="img-wrap">
+          <img src="modelo entidad relacion.png" alt="Modelo Entidad Relación" class="diagram-img">
+          <button type="button" class="zoom-btn" data-img="modelo entidad relacion.png" data-alt="Modelo Entidad Relación">🔍 Ver imagen ampliada</button>
+        </div>
+        <h3>Modelo Entidad Relación</h3>
+        <p>El Modelo Entidad Relación representa la estructura lógica de la base de datos del sistema MIRADENT. En él se identifican las entidades principales, sus atributos y las relaciones entre ellas, permitiendo almacenar y gestionar de forma organizada la información de pacientes, odontólogos, servicios, horarios, tratamientos y citas odontológicas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. ARQUITECTURA DEL PROYECTO -->
+  <section id="arquitectura" class="slide">
+    <p class="eyebrow">08</p>
+    <h2 class="section-title">Arquitectura del Proyecto</h2>
+
+    <!-- Arquitectura -->
+    <div class="sub-block">
+      <h3 class="sub-title">Arquitectura</h3>
+      <div class="split-block">
+        <p class="problem-text">El sistema MIRADENT implementa una arquitectura de tres capas, conformada por la capa de presentación, la capa de lógica de negocio y la capa de datos. El frontend será desarrollado con Angular y Tailwind CSS, proporcionando una interfaz moderna e intuitiva. La lógica de negocio estará implementada en ASP.NET Core Web API, encargada de procesar las solicitudes y aplicar las reglas del sistema. Finalmente, la información será almacenada en SQL Server, permitiendo una gestión segura y organizada de pacientes, odontólogos, servicios y citas. La comunicación entre el frontend y el backend se realizará mediante HTTP/HTTPS utilizando una API REST.</p>
+        <img src="diagrama de arquitectura.jpg" alt="Arquitectura del proyecto" class="problem-img">
+      </div>
+    </div>
+
+    <!-- Patrones de diseño -->
+    <div class="sub-block">
+      <h3 class="sub-title">Patrones de Diseño</h3>
+      <div class="card card-wide">
+        <p>Para el desarrollo de MIRADENT se implementarán diferentes patrones de diseño con el fin de garantizar un sistema organizado, escalable y fácil de mantener:
+           <li>MVC (Model-View-Controller): organiza la aplicación separando la presentación, la lógica de negocio y los datos.</li>
+           <li>Repository Pattern: abstrae el acceso a la base de datos mediante Entity Framework Core, facilitando el mantenimiento del código.</li>
+           <li>Dependency Injection (Inyección de Dependencias): utilizada por ASP.NET Core para desacoplar los componentes y mejorar la reutilización del código.</li>
+           <li>Singleton: empleado para servicios que requieren una única instancia durante la ejecución de la aplicación.</li>
+           <li>Middleware Pattern: permite gestionar procesos transversales como autenticación con JWT, autorización, manejo de errores y validaciones.</li>
+        </p>
+      </div>
+    </div>
+
+    <!-- Estándares -->
+    <div class="sub-block">
+      <h3 class="sub-title">Estándares</h3>
+      <div class="tag-grid">
+        <div class="tag-card">IEEE</div>
+        <div class="tag-card">HTML5</div>
+        <div class="tag-card">CSS3</div>
+        <div class="tag-card">Angular</div>
+        <div class="tag-card">ASP.NET</div>
+        <div class="tag-card">SQL SERVER</div>
+        <div class="tag-card">git y github</div>
+      </div>
+    </div>
+
+    <!-- Metodología -->
+    <div class="sub-block">
+      <h3 class="sub-title">Metodología — Scrum</h3>
+      <div class="card-grid">
+        <div class="card"><h3>Product Backlog</h3><p>Contiene todas las funcionalidades del proyecto MIRADENT, como autenticación, gestión de pacientes, odontólogos, servicios, horarios y citas. Estas tareas se priorizan según las necesidades del cliente y los objetivos del proyecto.</p></div>
+        <div class="card"><h3>Sprint</h3><p>El desarrollo se organiza en sprints de dos semanas, donde se implementan funcionalidades específicas del sistema, permitiendo realizar entregas incrementales y recibir retroalimentación continua.</p></div>
+        <div class="card"><h3>Sprint Backlog</h3><p>Incluye las tareas seleccionadas para cada sprint, como diseño en Figma, desarrollo del frontend en Angular, creación de la API en ASP.NET Core, base de datos en SQL Server y pruebas de cada módulo.</p></div>
+        <div class="card"><h3>Daily Scrum</h3><p>Reuniones breves entre los integrantes del equipo para revisar el avance del proyecto, identificar dificultades, planificar las actividades del día y asegurar el cumplimiento de los objetivos del sprint.</p></div>
+        <div class="card"><h3>Review</h3><p>Al finalizar cada sprint se presentan las funcionalidades desarrolladas, se verifican los requisitos implementados y se recopila la retroalimentación para realizar mejoras antes del siguiente sprint.</p></div>
+        <div class="card"><h3>Sprint Retrospective</h3><p>El equipo analiza los resultados del sprint, identifica fortalezas, oportunidades de mejora y define acciones que permitan optimizar el trabajo colaborativo y el desarrollo de las siguientes iteraciones.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- MANUAL DE MARCA -->
+  <!-- ============================= -->
+  <section id="marca" class="slide">
+    <p class="eyebrow">08.1</p>
+    <h2 class="section-title">Manual de Marca</h2>
+    <div class="card-grid">
+
+      <div class="card">
+        <span class="card-icon">🔵</span>
+        <h3>Logo Principal</h3>
+        <div class="img-wrap img-wrap--card">
+          <img src="logo.jpeg" alt="Logo Principal" class="card-img">
+          <button type="button" class="zoom-btn" data-img="logo.jpeg" data-alt="Logo Principal">🔍 Ver imagen ampliada</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">🔁</span>
+        <h3>Versiones del Logo</h3>
+        <div class="img-wrap img-wrap--card">
+          <img src="version logo 2.png" alt="Versiones del Logo" class="card-img">
+          <button type="button" class="zoom-btn" data-img="version logo 2.png" data-alt="Versiones del Logo">🔍 Ver imagen ampliada</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">🎨</span>
+        <h3>Paleta de Colores</h3>
+        <div class="img-wrap img-wrap--card">
+          <img src="paleta de colores.png" alt="Paleta de Colores" class="card-img">
+          <button type="button" class="zoom-btn" data-img="paleta de colores.png" data-alt="Paleta de Colores">🔍 Ver imagen ampliada</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">🔤</span>
+        <h3>Tipografía</h3>
+        <div class="img-wrap img-wrap--card">
+          <img src="tipografia.png" alt="Tipografía" class="card-img">
+          <button type="button" class="zoom-btn" data-img="tipografia.png" data-alt="Tipografía">🔍 Ver imagen ampliada</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECURSOS DEL PROYECTO -->
+  <section id="recursos" class="slide recursos">
+    <p class="eyebrow">10</p>
+    <h2 class="section-title">Recursos del Proyecto</h2>
+    <p class="recursos-text">Acceda al prototipo interactivo y al desarrollo funcional del proyecto.</p>
+    <div class="btn-group">
+      <a href="https://www.figma.com/make/A11JXrpUn2S5uVzHw4ErG6/prototipo-odontologia?fullscreen=1&t=6QW4lliGB6aQ9p7b-1" class="btn btn-primary">Ver Prototipo en Figma</a>
+      <a href="#" class="btn btn-outline">Ver Prototipo en HTML</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer-project">Gestion de citas MIRADENT</p>
+  <p class="footer-team">Equipo ADSO &mdash; SENA &mdash; 2026</p>
+  <p class="footer-thanks">Gracias por su atención</p>
+</footer>
+
+<!-- MODAL PARA IMAGEN AMPLIADA -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+  <img src="" alt="" id="lightboxImg" class="lightbox-img">
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
