@@ -1,14 +1,18 @@
 /* ====================================================================
-   SCRIPT.JS — Visor de imagen ampliada (lightbox) para la sección
-   de Diagramas. Solo se activa al hacer clic en el botón
-   "Ver imagen ampliada" de cada diagrama.
+   SCRIPT.JS — MIRADENT
+   1. Lightbox para imágenes ampliadas (diagramas y manual de marca)
+   2. Menú hamburguesa para móvil
    ==================================================================== */
 
 document.addEventListener('DOMContentLoaded', function () {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxClose = document.getElementById('lightboxClose');
-  const zoomButtons = document.querySelectorAll('.zoom-btn');
+
+  /* =====================================================
+     1. LIGHTBOX
+     ===================================================== */
+  var lightbox      = document.getElementById('lightbox');
+  var lightboxImg   = document.getElementById('lightboxImg');
+  var lightboxClose = document.getElementById('lightboxClose');
+  var zoomButtons   = document.querySelectorAll('.zoom-btn');
 
   function openLightbox(src, alt) {
     lightboxImg.src = src;
@@ -27,25 +31,55 @@ document.addEventListener('DOMContentLoaded', function () {
 
   zoomButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      const src = btn.getAttribute('data-img');
-      const alt = btn.getAttribute('data-alt');
-      openLightbox(src, alt);
+      openLightbox(btn.getAttribute('data-img'), btn.getAttribute('data-alt'));
     });
   });
 
   lightboxClose.addEventListener('click', closeLightbox);
 
-  /* Cerrar al hacer clic fuera de la imagen */
   lightbox.addEventListener('click', function (e) {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
+    if (e.target === lightbox) closeLightbox();
   });
 
-  /* Cerrar con la tecla Escape */
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
       closeLightbox();
     }
   });
+
+  /* =====================================================
+     2. MENÚ HAMBURGUESA
+     ===================================================== */
+  var hamburger   = document.getElementById('hamburger');
+  var mobileMenu  = document.getElementById('mobileMenu');
+  var mobileLinks = document.querySelectorAll('.mobile-link');
+
+  function toggleMenu() {
+    var isOpen = mobileMenu.classList.toggle('is-open');
+    hamburger.classList.toggle('is-open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.remove('is-open');
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+
+  mobileLinks.forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (mobileMenu.classList.contains('is-open') &&
+        !mobileMenu.contains(e.target) &&
+        !hamburger.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
 });

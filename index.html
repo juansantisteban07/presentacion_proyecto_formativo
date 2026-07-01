@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gestion de citas MIRADENT | SENA ADSO</title>
 
-<!-- Tipografías: Poppins (display) + Inter (texto/cuerpo) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,21 +17,45 @@
   <span class="rail-line"></span>
 </div>
 
+<!-- NAVEGACIÓN SUPERIOR FIJA      -->
 <header class="navbar">
   <a href="#hero" class="nav-brand">Proyecto<span>•</span>SENA</a>
-  <nav class="nav-links">
-    <a href="#presentacion">Presentación</a>
+
+  <!-- Menú desktop -->
+  <nav class="nav-links" id="navLinks">
+    <a href="#introduccion">Introducción</a>
     <a href="#problema">Problema</a>
+    <a href="#objetivo-general">Obj. General</a>
     <a href="#objetivos">Objetivos</a>
+    <a href="#diagramas">Diagramas</a>
     <a href="#arquitectura">Arquitectura</a>
     <a href="#marca">Marca</a>
-    <a href="#prototipo">Prototipo</a>
     <a href="#recursos">Recursos</a>
   </nav>
+
+  <!-- Botón hamburguesa (solo móvil) -->
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
+
+<!-- Menú desplegable móvil -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#introduccion"   class="mobile-link">Introducción</a>
+  <a href="#problema"       class="mobile-link">Problema</a>
+  <a href="#objetivo-general" class="mobile-link">Obj. General</a>
+  <a href="#objetivos"      class="mobile-link">Objetivos</a>
+  <a href="#diagramas"      class="mobile-link">Diagramas</a>
+  <a href="#arquitectura"   class="mobile-link">Arquitectura</a>
+  <a href="#marca"          class="mobile-link">Marca</a>
+  <a href="#recursos"       class="mobile-link">Recursos</a>
+</div>
 
 <main>
 
+  <!-- HERO -->
   <section id="hero" class="slide hero">
     <img src="img/logo.jpeg" alt="Logo de Gestion de citas MIRADENT" class="hero-logo">
     <p class="eyebrow">Proyecto formativo &mdash; Tecnólogo ADSO</p>
@@ -104,7 +127,7 @@
     <p class="eyebrow">05</p>
     <h2 class="section-title">Objetivo General</h2>
     <div class="card card-feature">
-      <p class="feature-text">Desarrollar un sistema web. que permita al cliente reservar sus turnos y citas de manera sencilla y con recordatorio automático, y que proporcione al negocio herramienta de control y estadística para optimizar sus servicios.</p>
+      <p class="feature-text">Desarrollar un sistema web que permita al cliente reservar sus turnos y citas de manera sencilla y con recordatorio automático, y que proporcione al negocio herramientas de control y estadística para optimizar sus servicios.</p>
     </div>
   </section>
 
@@ -114,9 +137,9 @@
     <h2 class="section-title">Objetivos Específicos</h2>
     <div class="card-grid">
       <div class="card"><span class="card-num">01</span><p>Desarrollar un sistema de registro y autenticación para los clientes y administradores.</p></div>
-      <div class="card"><span class="card-num">02</span><p>02.	Implementar un calendario interactivo que muestre la disponibilidad de turnos.</p></div>
-      <div class="card"><span class="card-num">03</span><p>03.	Incorporar notificaciones automáticas, (correo o WhatsApp) para recordar las citas.</p></div>
-      <div class="card"><span class="card-num">04</span><p>04.	Diseñar un panel administrativo con reporte de uso (hora pico, servicios mas solicitados).</p></div>
+      <div class="card"><span class="card-num">02</span><p>Implementar un calendario interactivo que muestre la disponibilidad de turnos.</p></div>
+      <div class="card"><span class="card-num">03</span><p>Incorporar notificaciones automáticas (correo o WhatsApp) para recordar las citas.</p></div>
+      <div class="card"><span class="card-num">04</span><p>Diseñar un panel administrativo con reporte de uso (hora pico, servicios más solicitados).</p></div>
     </div>
   </section>
 
@@ -125,30 +148,67 @@
     <p class="eyebrow">07</p>
     <h2 class="section-title">Diagramas</h2>
     <div class="diagram-grid">
+
+      <!-- Diagrama de Clases -->
       <div class="diagram-item">
         <div class="img-wrap">
           <img src="img/diagrama de clases.png" alt="Diagrama de Clases" class="diagram-img">
-          <button type="button" class="zoom-btn" data-img="img/diagrama de clases.png" data-alt="Diagrama de Clases">🔍 Ver imagen ampliada</button>
+          <button type="button" class="zoom-btn" data-img="img/diagrama de clases.png" data-alt="Diagrama de Clases">🔍 Ver ampliada</button>
         </div>
         <h3>Diagrama de Clases</h3>
-        <p>El diagrama de clases representa la estructura estática del sistema MIRADENT, mostrando las principales clases, sus atributos, métodos y relaciones. Este modelo sirve como base para el desarrollo del software, permitiendo organizar la lógica del negocio y facilitar la implementación del sistema en ASP.NET Core y Angular.</p>
+        <p>Representa la estructura estática del sistema MIRADENT: clases, atributos, métodos y relaciones que sirven de base para la implementación en ASP.NET Core y Angular.</p>
       </div>
+
+      <!-- Diagrama de Arquitectura -->
       <div class="diagram-item">
         <div class="img-wrap">
-          <img src="img/diagrama de arquitectura.jpg" alt="Diagrama de Arquitectura" class="diagram-img">
-          <button type="button" class="zoom-btn" data-img="img/diagrama de arquitectura.jpg" data-alt="Diagrama de Arquitectura">🔍 Ver imagen ampliada</button>
+          <img src="img/arquitectura software.png" height="150px" alt="Diagrama de Arquitectura" class="diagram-img">
+          <button type="button" class="zoom-btn" data-img="img/arquitectura software.png" data-alt="Diagrama de Arquitectura">🔍 Ver ampliada</button>
         </div>
-        <h3>Arquitectura</h3>
-        <p>El diagrama de arquitectura presenta la organización del sistema mediante una arquitectura de tres capas: presentación, lógica de negocio y datos. Esta estructura permite separar responsabilidades, mejorar el mantenimiento del software y garantizar una comunicación eficiente entre el frontend desarrollado en Angular, el backend en ASP.NET Core Web API y la base de datos SQL Server.</p>
+        <h3>Diagrama de Arquitectura</h3>
+        <p>Presenta la organización en tres capas (presentación, lógica de negocio y datos) y la comunicación entre Angular, ASP.NET Core Web API y SQL Server.</p>
       </div>
+
+      <!-- Modelo Entidad Relación -->
       <div class="diagram-item">
         <div class="img-wrap">
-          <img src="img/MER.jpeg" alt="Modelo Entidad Relación" class="diagram-img">
-          <button type="button" class="zoom-btn" data-img="img/MER.jpeg" data-alt="Modelo Entidad Relación">🔍 Ver imagen ampliada</button>
+          <img src="img/modelo MER.png" alt="Modelo Entidad Relación" class="diagram-img">
+          <button type="button" class="zoom-btn" data-img="img/modelo MER.png" data-alt="Modelo Entidad Relación">🔍 Ver ampliada</button>
         </div>
         <h3>Modelo Entidad Relación</h3>
-        <p>El Modelo Entidad Relación representa la estructura lógica de la base de datos del sistema MIRADENT. En él se identifican las entidades principales, sus atributos y las relaciones entre ellas, permitiendo almacenar y gestionar de forma organizada la información de pacientes, odontólogos, servicios, horarios, tratamientos y citas odontológicas.</p>
+        <p>Identifica las entidades principales y sus relaciones para gestionar pacientes, odontólogos, servicios, horarios, tratamientos y citas odontológicas.</p>
       </div>
+
+      <!-- Modelo Conceptual -->
+      <div class="diagram-item">
+        <div class="img-wrap">
+          <img src="img/modelo conceptual.png" alt="Modelo Conceptual" class="diagram-img">
+          <button type="button" class="zoom-btn" data-img="img/modelo conceptual.png" data-alt="Modelo Conceptual">🔍 Ver ampliada</button>
+        </div>
+        <h3>Modelo Conceptual</h3>
+        <p>Define las entidades del negocio y sus relaciones de forma abstracta, sin depender de ningún motor de base de datos, enfocándose en la comprensión del dominio.</p>
+      </div>
+
+      <!-- Modelo Lógico -->
+      <div class="diagram-item">
+        <div class="img-wrap">
+          <img src="img/modelo logico.jpg" alt="Modelo Lógico" class="diagram-img">
+          <button type="button" class="zoom-btn" data-img="img/modelo logico.jpg" data-alt="Modelo Lógico">🔍 Ver ampliada</button>
+        </div>
+        <h3>Modelo Lógico</h3>
+        <p>Traduce el modelo conceptual a tablas, columnas y claves (primarias y foráneas), definiendo la estructura relacional independiente de la plataforma.</p>
+      </div>
+
+      <!-- Modelo Físico -->
+      <div class="diagram-item">
+        <div class="img-wrap">
+          <img src="img/modelo fisico.png" alt="Modelo Físico" class="diagram-img">
+          <button type="button" class="zoom-btn" data-img="img/modelo fisico.png" data-alt="Modelo Físico">🔍 Ver ampliada</button>
+        </div>
+        <h3>Modelo Físico</h3>
+        <p>Especifica la implementación real en SQL Server: tipos de datos concretos, índices, constraints y scripts DDL listos para ejecutar en la base de datos.</p>
+      </div>
+
     </div>
   </section>
 
@@ -157,26 +217,41 @@
     <p class="eyebrow">08</p>
     <h2 class="section-title">Arquitectura del Proyecto</h2>
 
-    <!-- Arquitectura -->
+    <!-- Arquitectura general -->
     <div class="sub-block">
       <h3 class="sub-title">Arquitectura</h3>
       <div class="split-block">
-        <p class="problem-text">El sistema MIRADENT implementa una arquitectura de tres capas, conformada por la capa de presentación, la capa de lógica de negocio y la capa de datos. El frontend será desarrollado con Angular y Tailwind CSS, proporcionando una interfaz moderna e intuitiva. La lógica de negocio estará implementada en ASP.NET Core Web API, encargada de procesar las solicitudes y aplicar las reglas del sistema. Finalmente, la información será almacenada en SQL Server, permitiendo una gestión segura y organizada de pacientes, odontólogos, servicios y citas. La comunicación entre el frontend y el backend se realizará mediante HTTP/HTTPS utilizando una API REST.</p>
-        <img src="img/diagrama de arquitectura.jpg" alt="Arquitectura del proyecto" class="problem-img">
+        <p class="problem-text">El sistema MIRADENT implementa una arquitectura de tres capas: presentación, lógica de negocio y datos. La capa de presentación se desarrolla con Angular y Tailwind CSS para ofrecer una interfaz moderna, responsiva e intuitiva. La lógica de negocio se implementa con Node.js y Express.js, exponiendo una API REST encargada de procesar las reglas del sistema y gestionar la comunicación con la base de datos. La información se almacena en SQL Server, garantizando integridad y organización de los datos. La comunicación entre las capas se realiza mediante el protocolo HTTP/HTTPS, permitiendo un intercambio seguro y eficiente de la información.</p>
+        <img src="img/arquitectura.png" alt="Arquitectura del proyecto" class="problem-img">
       </div>
     </div>
 
-    <!-- Patrones de diseño -->
+    <!-- Patrones de diseño — solo 3, con justificación -->
     <div class="sub-block">
       <h3 class="sub-title">Patrones de Diseño</h3>
-      <div class="card card-wide">
-        <p>Para el desarrollo de MIRADENT se implementarán diferentes patrones de diseño con el fin de garantizar un sistema organizado, escalable y fácil de mantener:
-           <li>MVC (Model-View-Controller): organiza la aplicación separando la presentación, la lógica de negocio y los datos.</li>
-           <li>Repository Pattern: abstrae el acceso a la base de datos mediante Entity Framework Core, facilitando el mantenimiento del código.</li>
-           <li>Dependency Injection (Inyección de Dependencias): utilizada por ASP.NET Core para desacoplar los componentes y mejorar la reutilización del código.</li>
-           <li>Singleton: empleado para servicios que requieren una única instancia durante la ejecución de la aplicación.</li>
-           <li>Middleware Pattern: permite gestionar procesos transversales como autenticación con JWT, autorización, manejo de errores y validaciones.</li>
-        </p>
+      <div class="card-grid">
+
+        <div class="card patron-card">
+          <span class="card-icon">🏛️</span>
+          <h3>MVC — Model View Controller</h3>
+          <p class="patron-desc">Separa la presentación (View), la lógica de negocio (Controller) y el acceso a los datos (Model) en componentes independientes.</p>
+          <p class="patron-why"><strong>¿Por qué?</strong> Permite desarrollar el frontend y el backend de manera independiente, facilita el mantenimiento del sistema y mejora la organización del código.</p>
+        </div>
+
+        <div class="card patron-card">
+          <span class="card-icon">🗄️</span>
+          <h3>Repository Pattern</h3>
+          <p class="patron-desc">Centraliza el acceso a la base de datos mediante repositorios encargados de realizar las consultas y operaciones CRUD sobre SQL Server.</p>
+          <p class="patron-why"><strong>¿Por qué?</strong> Evita mezclar consultas SQL con la lógica de negocio, facilita el mantenimiento del código y permite cambiar la implementación del acceso a datos sin afectar el resto del sistema.</p>
+        </div>
+
+        <div class="card patron-card">
+          <span class="card-icon">🔐</span>
+          <h3>Middleware Pattern</h3>
+          <p class="patron-desc">Utiliza middlewares de Express.js para procesar las solicitudes antes de llegar a los controladores.</p>
+          <p class="patron-why"><strong>¿Por qué?</strong> Permite implementar autenticación JWT, validación de datos, manejo de errores, registro de peticiones y control de acceso de forma centralizada y reutilizable.</p>
+        </div>
+
       </div>
     </div>
 
@@ -190,29 +265,32 @@
         <div class="tag-card">Angular</div>
         <div class="tag-card">ASP.NET</div>
         <div class="tag-card">SQL SERVER</div>
-        <div class="tag-card">git y github</div>
+        <div class="tag-card">Git y GitHub</div>
       </div>
     </div>
 
-    <!-- Metodología -->
+    <!-- Metodología Scrum -->
     <div class="sub-block">
       <h3 class="sub-title">Metodología — Scrum</h3>
       <div class="card-grid">
-        <div class="card"><h3>Product Backlog</h3><p>Contiene todas las funcionalidades del proyecto MIRADENT, como autenticación, gestión de pacientes, odontólogos, servicios, horarios y citas. Estas tareas se priorizan según las necesidades del cliente y los objetivos del proyecto.</p></div>
-        <div class="card"><h3>Sprint</h3><p>El desarrollo se organiza en sprints de dos semanas, donde se implementan funcionalidades específicas del sistema, permitiendo realizar entregas incrementales y recibir retroalimentación continua.</p></div>
-        <div class="card"><h3>Sprint Backlog</h3><p>Incluye las tareas seleccionadas para cada sprint, como diseño en Figma, desarrollo del frontend en Angular, creación de la API en ASP.NET Core, base de datos en SQL Server y pruebas de cada módulo.</p></div>
-        <div class="card"><h3>Daily Scrum</h3><p>Reuniones breves entre los integrantes del equipo para revisar el avance del proyecto, identificar dificultades, planificar las actividades del día y asegurar el cumplimiento de los objetivos del sprint.</p></div>
-        <div class="card"><h3>Review</h3><p>Al finalizar cada sprint se presentan las funcionalidades desarrolladas, se verifican los requisitos implementados y se recopila la retroalimentación para realizar mejoras antes del siguiente sprint.</p></div>
-        <div class="card"><h3>Sprint Retrospective</h3><p>El equipo analiza los resultados del sprint, identifica fortalezas, oportunidades de mejora y define acciones que permitan optimizar el trabajo colaborativo y el desarrollo de las siguientes iteraciones.</p></div>
+        <div class="card"><h3>Product Backlog</h3><p>Contiene todas las funcionalidades del proyecto MIRADENT: autenticación, gestión de pacientes, odontólogos, servicios, horarios y citas, priorizadas según los objetivos del proyecto.</p></div>
+        <div class="card"><h3>Sprint</h3><p>El desarrollo se organiza en sprints de dos semanas, permitiendo entregas incrementales y retroalimentación continua.</p></div>
+        <div class="card"><h3>Sprint Backlog</h3><p>Incluye las tareas del sprint: diseño en Figma, frontend en Angular, API en ASP.NET Core, base de datos en SQL Server y pruebas de cada módulo.</p></div>
+        <div class="card"><h3>Daily Scrum</h3><p>Reuniones breves para revisar el avance, identificar dificultades y planificar las actividades del día.</p></div>
+        <div class="card"><h3>Review</h3><p>Al finalizar cada sprint se presentan las funcionalidades desarrolladas y se recopila retroalimentación para el siguiente sprint.</p></div>
+        <div class="card"><h3>Sprint Retrospective</h3><p>El equipo analiza fortalezas y oportunidades de mejora para optimizar el trabajo colaborativo en las siguientes iteraciones.</p></div>
       </div>
-      <div class="sub-block">
-        <h3 class="sub-title">Diagrama scrum</h3>
-        <div class="img-wrap img-wrap--card">
-          <img src="img/diagrama scrum.jpeg" height="215px" width="150px" alt="diagrama scrum" class="card-img">
-          <button type="button" class="zoom-btn" data-img="img/diagrama scrum.jpeg" data-alt="diagrama scrum">🔍 Ver imagen ampliada</button>
+
+      <!-- Diagrama Scrum -->
+      <div class="sub-block" style="margin-top: 40px;">
+        <h3 class="sub-title">Diagrama Scrum</h3>
+        <div class="img-wrap img-wrap--card" style="max-width: 600px;">
+          <img src="img/diagrama scrum.jpeg" alt="Diagrama Scrum" class="card-img">
+          <button type="button" class="zoom-btn" data-img="img/diagrama scrum.jpeg" data-alt="Diagrama Scrum">🔍 Ver imagen ampliada</button>
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- MANUAL DE MARCA -->
@@ -225,7 +303,7 @@
         <span class="card-icon">🔵</span>
         <h3>Logo Principal</h3>
         <div class="img-wrap img-wrap--card">
-          <img src="img/logo.jpeg" height="215px" width="150px" alt="Logo Principal" class="card-img">
+          <img src="img/logo.jpeg" alt="Logo Principal" class="card-img">
           <button type="button" class="zoom-btn" data-img="img/logo.jpeg" data-alt="Logo Principal">🔍 Ver imagen ampliada</button>
         </div>
       </div>
@@ -234,7 +312,7 @@
         <span class="card-icon">🔁</span>
         <h3>Versiones del Logo</h3>
         <div class="img-wrap img-wrap--card">
-          <img src="img/version logo 2.png" height="215px" alt="Versiones del Logo" class="card-img">
+          <img src="img/version logo 2.png" height="200px" alt="Versiones del Logo" class="card-img">
           <button type="button" class="zoom-btn" data-img="img/version logo 2.png" data-alt="Versiones del Logo">🔍 Ver imagen ampliada</button>
         </div>
       </div>
@@ -275,7 +353,7 @@
 
 <footer class="footer">
   <p class="footer-project">Gestion de citas MIRADENT</p>
-  <p class="footer-team">Equipo ADSO  SENA  2026</p>
+  <p class="footer-team">Equipo ADSO &mdash; SENA &mdash; 2026</p>
   <p class="footer-thanks">Gracias por su atención</p>
 </footer>
 
