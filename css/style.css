@@ -288,6 +288,7 @@ img { max-width: 100%; display: block; }
 
 /* Pregunta Problema y Objetivo General: texto en negrilla y color azul para resaltar */
 .feature-question {
+  align-items: center;
   font-family: var(--font-display);
   font-size: clamp(1.3rem, 2.6vw, 1.9rem);
   font-weight: 700;
